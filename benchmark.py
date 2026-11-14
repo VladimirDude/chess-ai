@@ -41,7 +41,6 @@ def play_single_game(args):
                 break
         else:
             try:
-                # Stockfish move with strict 5-second limit
                 res = sf_engine.play(board, chess.engine.Limit(time=5.0))
                 if res.move in board.legal_moves:
                     board.push(res.move)
